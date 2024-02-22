@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <title>Multi step Form</title>
+</head>
+
+<body>
+  <p class="c"></p>
+
+  <section class="backgnd">
+   
+    <!-- ASIDE INFORMATION -->
+    <div>
+      <nav class="nav_step-bar">
+        <!-- STEP 1 -->
+        <article class="step_i">
+          <div>
+            <p class="step-number">1</p>
+          </div>
+
+          <div>
+            <h2>Step1</h2>
+            <h3>Your info</h3>
+          </div>
+        </article>
+
+        <!-- STEP 2 -->
+        <article class="step_i">
+          <div>
+            <p class="step-number">2</p>
+          </div>
+
+          <div>
+            <h2>Step2</h2>
+            <h3>Select plan</h3>
+          </div>
+        </article>
+
+        <!-- STEP 3 -->
+        <article class="step_i">
+          <div>
+            <p class="step-number">3</p>
+          </div>
+
+          <div>
+            <h2>Step3</h2>
+            <h3>ADD-ONS</h3>
+          </div>
+        </article>
+
+        <!-- STEP 4 -->
+        <article class="step_i">
+          <div>
+            <p class="step-number">4</p>
+          </div>
+
+          <div>
+            <h2>Step4</h2>
+            <h3>Summary</h3>
+          </div>
+        </article>
+      </nav>
+    </div>
+    
+    <div>
+      <!-- DATA ZONE -->
+      <main>
+        <section class="data-frame"> <!-- No borrar el section -->
+          <div class="df-firstChild">
+            <h1>
+              Personal info
+            </h1>
+    
+            <p>
+              Please provide your name, email address and phone number.
+            </p>
+          </div>
+    
+          <form class="df-lastChild">
+            
+            <section class="data-inputs">
+              <label for="complete-name">Name</label>
+              <input type="text" id="complete-name" placeholder="e.g. Stephen King" required>
+            </section>
+    
+            <section class="data-inputs">
+              <label for="e-mail">Email Address</label>
+              <input type="email" id="e-mail" placeholder="e.g. stephenking@lorem.com" required>
+            </section>
+            
+            <section class="data-inputs">
+              <label for="phone-number">Phone Number</label>
+              <input type="text" id="phone-number" placeholder="e.g. +1 234 567 890" required>
+            </section>
+          </form>          
+            
+        </section>
+      </main>
+  
+      <!-- FOOTER BUTTON -->
+      <footer>
+        <a class="footer-button" href="#">Next Step</a>
+      </footer>
+    </div>
+
+
+
+  </section>
+</body>
+</html>

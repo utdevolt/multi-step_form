@@ -1,0 +1,446 @@
+.c {
+  color: hsl(213, 96%, 18%);
+  color: hsl(243, 100%, 62%);
+  color: hsl(228, 100%, 84%);
+  color: hsl(206, 94%, 87%);
+  color: hsl(354, 84%, 57%);
+
+  color: hsl(231, 11%, 63%);
+  color: hsl(229, 24%, 87%);
+  color: hsl(217, 100%, 97%);
+  color: hsl(231, 100%, 99%);
+  color: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  /* width: 100%; */
+  height: 100vh;
+  background-color: hsl(217, 100%, 97%);
+}
+
+
+.backgnd {
+  /* border: solid violet; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ASIDE INFORMATION */
+.backgnd > div:first-child {
+  /* border: solid black; */
+  background-image: url(../assets/images/bg-sidebar-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 3.5vh;
+  width: 100%;
+  height: 30%;
+}
+
+.nav_step-bar {
+  /* border: solid cyan; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 6%;
+  margin-top: 0.6em;
+}
+
+/* Ocultamos los detalles de los steps step */
+.nav_step-bar .step_i div:last-child {
+  display: none;
+}
+
+/* STEPs sin sombrear */
+.step-number {
+  border: solid 1px white;
+  color: white;
+  font-weight: bold;
+  width: 7vh;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+
+
+/* STEP sombreado celeste */
+.nav_step-bar article:nth-child(1) p {
+
+  background-color: hsl(206, 94%, 87%);
+  color: black;
+}
+
+
+/* DATA ZONE */
+.backgnd div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  /* border: solid rgba(66, 109, 148, 0.651); */
+  background-color: hsl(0, 0%, 100%);
+  width: 90%;
+  height: 72%;
+  padding: 3vh;
+  border-radius: 12px;
+  position: absolute;
+  top: 13%;
+}
+
+.data-frame {
+  /* border: solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title and subtitle of dataframe */
+.df-firstChild {
+  /* border: solid blue; */
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Personal info */
+.df-firstChild h1 {
+  /* border: solid yellow; */
+  height: 40%;
+  font-size: 5vh;
+  color: hsl(213, 96%, 18%);
+  display: flex;
+  align-items: end;
+}
+
+/* description */
+.df-firstChild p {
+  /* border: solid yellowgreen; */
+  width: 90%;
+  height: 60%;
+  padding-top: 1vh;
+  font-size: 110%;
+  color: hsl(231, 11%, 63%);
+  font-weight: 400;
+}
+
+/* data inputs of data frame */
+.df-lastChild {
+  /* border: solid orange; */
+  width: 100%;
+  height: 70%;
+  display: flex; 
+  flex-direction: column;
+}
+
+.data-inputs{
+  /* border: solid cyan; */
+  width: 100%;
+  height: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  font-size: 2.5vh;
+  color: hsl(213, 96%, 18%);
+}
+
+.data-inputs label {
+  font-weight: 500;
+}
+
+.data-inputs input {
+  width: 100%;
+  height: 50%;
+  border-radius: 5px;
+  border: 2px solid hsl(229, 24%, 87%);
+  font-size: 2.5vh;
+  padding-left: 1.8vh;
+  text-align: justify;
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+  outline: none;
+}
+
+.data-inputs input::placeholder {
+  color: hsl(231, 12%, 70%);
+  font-weight: 500;
+}
+
+.data-inputs input:focus {
+  border: 2px solid hsl(243, 100%, 62%);;
+}
+
+.df-lastChild > section:nth-child(2) > input {
+  font-size: 2.2vh;
+}
+
+/* BOTONES BACK - NEXT */
+.backgnd > div:last-child {
+  width: 100%;
+  height: 12%;
+}
+
+.backgnd > div:last-child footer {
+  /* border: solid green; */
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.footer-button {
+  /* border: solid red; */
+  padding: 0.9em 1.5em;
+  border-radius: 6px;
+  background-color:hsl(213, 96%, 18%);
+  color: white;
+  text-decoration: none;
+  font-size: 2.5vh;
+}
+
+
+
+/* =========================== */
+/* IMPLEMENTACIÓN RESPONSIVE */
+/* =========================== */
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    background-color: hsl(217, 100%, 97%);
+    padding: 7vh 15vw;
+  }
+
+  .backgnd {
+    /* border: solid violet; */
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  /* ASIDE INFORMATION */
+  .backgnd > div:first-child {
+    /* border: solid black; */
+    background-image: url(../assets/images/bg-sidebar-desktop.svg);
+    font-size: 3.5vh;
+    width: 30%;
+    height: 100%;
+    padding: 3%;
+    border-radius: 12px;
+    background-size: cover;
+  }
+  
+  .nav_step-bar {
+    /* border: solid cyan; */
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    gap: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  /* Ocultamos los detalles de los steps step */
+  .step_i {
+    /* border: solid red; */
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav_step-bar .step_i div:last-child {
+    /* border: solid yellow; */
+    /* background-color: cadetblue; */
+    width: calc(100% - 6.5vh);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start; 
+    justify-content: center;   
+  }
+
+  /* step1, step2, ... */
+  .step_i div:last-child h2 {
+    font-size: 2.5vh;
+    font-weight: 400;
+    color: hsl(229, 24%, 87%);
+  }
+
+  /* step_i description */
+  .step_i div:last-child h3 {
+    font-size: 2.7vh;
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+  }
+  
+  
+  /* STEPs sin sombrear */
+  .step-number {
+    border: solid 1px white;
+    color: white;
+    font-weight: bold;
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    
+  /* STEP sombreado celeste */
+  .nav_step-bar article:nth-child(1) p {
+  
+    background-color: hsl(206, 94%, 87%);
+    color: black;
+  }
+  
+  
+  /* MAIN + FOOTER */
+  .backgnd > div:last-child {
+    /* border: solid red;
+    background-color: aquamarine; */
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    padding-top: 5%;
+  }
+  
+   /* DATA ZONE */
+  main {
+    /* border: solid black; */
+    background-color: hsl(0, 0%, 100%);
+    position: static;
+    width: 90%;
+    height: 80%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .data-frame {
+    /* border: solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Title and subtitle of dataframe */
+  .df-firstChild {
+    /* border: solid blue; */
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Personal info */
+  .df-firstChild h1 {
+    /* border: solid yellow; */
+    height: 40%;
+    font-size: 5vh;
+    color: hsl(213, 96%, 18%);
+    display: flex;
+    align-items: center;
+  }
+  
+  /* description */
+  .df-firstChild p {
+    /* border: solid yellowgreen; */
+    width: 100%;
+    height: 60%;
+    padding-top: 1vh;
+    font-size: 110%;
+    @media (max-width: 952px) {
+      font-size: 95%;
+    }
+  }
+  
+  /* data inputs of data frame */
+  .df-lastChild {
+    /* border: solid orange; */
+    width: 100%;
+    height: 70%;
+    display: flex; 
+    flex-direction: column;
+  }
+  
+  .data-inputs{
+    /* border: solid cyan; */
+    width: 100%;
+    height: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    font-size: 2.5vh;
+    color: hsl(213, 96%, 18%);
+  }
+
+  .data-inputs input {
+    width: 100%;
+    height: 55%;
+    border-radius: 5px;
+    font-size: 2.5vh;
+    padding-left: 1.8vh;
+    text-align: justify;
+  }
+  
+  .df-lastChild > section:nth-child(2) > input {
+    font-size: 2.2vh;
+  }
+  
+
+
+  /* BOTONES BACK - NEXT */
+  .backgnd > div:last-child footer {
+    /* border: solid green; */
+    background-color: hsl(0, 0%, 100%);
+    width: 100%;
+    height: 15%;
+    padding-right: 19.23px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  
+  .footer-button {
+    padding: 0.9em 1.5em;
+    border-radius: 6px;
+    background-color:hsl(213, 96%, 18%);
+    color: white;
+    text-decoration: none;
+    font-size: 2.5vh;
+  }
+}
